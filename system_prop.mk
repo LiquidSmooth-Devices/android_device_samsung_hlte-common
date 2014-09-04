@@ -6,7 +6,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.voicerec=false \
     ro.qc.sdk.audio.fluencetype=fluence \
     use.voice.path.for.pcm.voip=true \
-    use.dedicated.device.for.voip=true
+    use.dedicated.device.for.voip=true \
+    persist.call_recording.enabled=true \
+    persist.call_recording.src=4
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
