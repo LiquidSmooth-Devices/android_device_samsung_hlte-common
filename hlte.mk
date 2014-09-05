@@ -87,6 +87,22 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # NFC
+ifeq ($(TARGET_NFC_TECH), nxp)
+PRODUCT_PACKAGES += \
+    libnfc \
+    libnfc_jni \
+    Nfc \
+    Tag \
+    com.android.nfc_extras
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH):system/etc/nfcee_access.xml \
+    $(LOCAL_PATH)/configs/libpn547_fw.so:system/vendor/firmware/libpn547_fw.so \
+    $(LOCAL_PATH)/configs/libpn547_fw_pku.so:system/vendor/firmware/libpn547_fw_pku.so \
+    $(LOCAL_PATH)/configs/libpn547_fw_platform.so:system/vendor/firmware/libpn547_fw_platform.so
+
+else
+
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
@@ -94,10 +110,11 @@ PRODUCT_PACKAGES += \
     Tag
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml \
-    $(LOCAL_PATH)/configs/libnfc-brcm-20791b05.conf:system/etc/libnfc-brcm-20791b05.conf \
-    $(LOCAL_PATH)/configs/libnfc-brcm-20791b04.conf:system/etc/libnfc-brcm-20791b04.conf \
-    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
+    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
+
+endif
 
 # Ramdisk
 PRODUCT_PACKAGES += \
