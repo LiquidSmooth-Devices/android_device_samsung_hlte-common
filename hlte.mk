@@ -91,13 +91,17 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
     nfc_nci.msm8974 \
+    libnfc \
+    libnfc_jni \
     Tag
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml \
-    $(LOCAL_PATH)/configs/libnfc-brcm-20791b05.conf:system/etc/libnfc-brcm-20791b05.conf \
-    $(LOCAL_PATH)/configs/libnfc-brcm-20791b04.conf:system/etc/libnfc-brcm-20791b04.conf \
-    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
+    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    $(LOCAL_PATH)/configs/libpn547_fw.so:system/vendor/firmware/libpn547_fw.so \
+    $(LOCAL_PATH)/configs/libpn547_fw_pku.so:system/vendor/firmware/libpn547_fw_pku.so \
+    $(LOCAL_PATH)/configs/libpn547_fw_platform.so:system/vendor/firmware/libpn547_fw_platform.so
 
 # Ramdisk
 PRODUCT_PACKAGES += \
