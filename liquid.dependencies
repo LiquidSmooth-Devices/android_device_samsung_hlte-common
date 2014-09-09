@@ -18,16 +18,16 @@
     "revision": "cm-11.0"
   },
   {
-    "remote": "ls",
-    "repository": "android_hardware_qcom_display-caf-new",
+    "remote": "gh",
+    "repository": "willl0344/hardware_qcom_display-caf-new",
     "target_path": "hardware/qcom/display-caf-new",
-    "revision": "kitkat"
+    "revision": "pre-mdss-crash-2"
   },
   {
-    "remote": "ls",
-    "repository": "android_hardware_qcom_media-caf-new",
+    "remote": "gh",
+    "repository": "willl0344/hardware_qcom_media-caf-new",
     "target_path": "hardware/qcom/media-caf-new",
-    "revision": "kitkat"
+    "revision": "pre-mdss-crash-2"
   },
   {
     "remote": "cm",
