@@ -36,6 +36,8 @@ on early-init
     write /sys/devices/fdb00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk 320000000
     write /sys/module/msm_hotplug/parameters/screen_off_max 1036800
     write /sys/module/intelli_plug/parameters/screen_off_max 1036800
+    write /sys/kernel/cpufreq_hardlimit/touchboost_hi_freq 1728000
+    write /sys/devices/fdb00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/min_pwrlevel 4
 
 on init
     # Set permissions for persist partition
