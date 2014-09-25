@@ -93,9 +93,6 @@ PRODUCT_PACKAGES += \
     nfc_nci.msm8974 \
     Tag
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
