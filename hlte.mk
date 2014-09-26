@@ -87,11 +87,23 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # NFC
+ifeq ($(TARGET_NFC_TECH), nxp)
+PRODUCT_PACKAGES += \
+    libnfc \
+    libnfc_jni \
+    Nfc \
+    Tag \
+    com.android.nfc_extras
+
+else
+
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
     nfc_nci.msm8974 \
     Tag
+
+endif
 
 # Ramdisk
 PRODUCT_PACKAGES += \
