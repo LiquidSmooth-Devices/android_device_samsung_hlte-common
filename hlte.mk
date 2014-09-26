@@ -99,7 +99,7 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
 
 PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH_ISIS)/configs/nfcee_access_isis.xml:system/etc/nfcee_access.xml \
+    $(NFCEE_ACCESS_PATH_ISIS):system/etc/nfcee_access.xml \
 
 else
 
@@ -110,7 +110,7 @@ PRODUCT_PACKAGES += \
     Tag
 
 PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml \
+    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
     $(LOCAL_PATH)/configs/libnfc-brcm-20791b05.conf:system/etc/libnfc-brcm-20791b05.conf \
     $(LOCAL_PATH)/configs/libnfc-brcm-20791b04.conf:system/etc/libnfc-brcm-20791b04.conf \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
