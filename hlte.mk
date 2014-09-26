@@ -88,7 +88,7 @@ PRODUCT_COPY_FILES += \
 
 # NFC
 NFCEE_ACCESS_PATH := device/samsung/hlte-common/configs/nfcee_access.xml
-NFCEE_ACCESS_PATH_ISIS := device/samsung/hlte-common/nfc/nfcee_access_isis.xml
+NFCEE_ACCESS_PATH_ISIS := device/samsung/hlte-common/configs/nfcee_access_isis.xml
 
 ifeq ($(TARGET_NFC_TECH), nxp)
 PRODUCT_PACKAGES += \
