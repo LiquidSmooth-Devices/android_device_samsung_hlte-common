@@ -89,11 +89,10 @@ PRODUCT_COPY_FILES += \
 # NFC
 ifeq ($(TARGET_NFC_TECH), nxp)
 PRODUCT_PACKAGES += \
-    libnfc \
-    libnfc_jni \
+    com.android.nfc_extras \
     Nfc \
-    Tag \
-    com.android.nfc_extras
+    nfc.MSM8974 \
+    Tag
 
 else
 
