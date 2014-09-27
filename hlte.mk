@@ -100,6 +100,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH_ISIS):system/etc/nfcee_access.xml \
+    frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
 
 else
 
