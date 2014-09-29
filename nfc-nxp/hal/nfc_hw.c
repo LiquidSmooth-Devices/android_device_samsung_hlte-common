@@ -17,7 +17,7 @@
 #include <string.h>
 
 #include <hardware/hardware.h>
-#include <hardware/nfc.h>
+#include "nfc.h"
 
 static uint8_t pn544_eedata_settings[][4] = {
     {0xA0, 0x0D, 0x04, 0x06}
