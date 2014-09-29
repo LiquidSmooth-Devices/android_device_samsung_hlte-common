@@ -93,6 +93,7 @@ ifeq ($(TARGET_NFC_TECH), nxp)
 PRODUCT_PACKAGES += \
     libnfc \
     libnfc_jni \
+    nfc.msm8974 \
     Nfc \
     Tag \
     com.android.nfc_extras
