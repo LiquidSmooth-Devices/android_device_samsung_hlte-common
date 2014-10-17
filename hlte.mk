@@ -88,21 +88,6 @@ PRODUCT_COPY_FILES += \
 
 # NFC
 NFCEE_ACCESS_PATH := device/samsung/hlte-common/configs/nfcee_access.xml
-NFCEE_ACCESS_PATH_ISIS := device/samsung/hlte-common/configs/nfcee_access_isis.xml
-
-ifeq ($(TARGET_NFC_TECH), nxp)
-PRODUCT_PACKAGES += \
-    libnfc \
-    libnfc_jni \
-    Nfc \
-    Tag \
-    com.android.nfc_extras \
-
-PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH_ISIS):system/etc/nfcee_access.xml \
-    frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
-
-else
 
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -114,10 +99,7 @@ PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
     $(LOCAL_PATH)/configs/libnfc-brcm-20791b05.conf:system/etc/libnfc-brcm-20791b05.conf \
     $(LOCAL_PATH)/configs/libnfc-brcm-20791b04.conf:system/etc/libnfc-brcm-20791b04.conf \
-    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
-
-endif
+    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
 
 # Ramdisk
 PRODUCT_PACKAGES += \
