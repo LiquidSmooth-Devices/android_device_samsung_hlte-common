@@ -6,6 +6,12 @@
     "revision": "lollipop"
   },
   {
+    "remote": "lsd",
+    "repository": "android_kernel_samsung_hlte",
+    "target_path": "kernel/samsung/hlte",
+    "revision": "lollipop"
+  },
+  {
     "remote": "cm",
     "repository": "android_device_qcom_common",
     "target_path": "device/qcom/common",
